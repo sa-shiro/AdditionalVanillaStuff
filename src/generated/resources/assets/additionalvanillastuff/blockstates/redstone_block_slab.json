@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "additionalvanillastuff:block/redstone_block_slab_top"
+    },
+    "type=bottom": {
+      "model": "additionalvanillastuff:block/redstone_block_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/redstone_block"
+    }
+  }
+}

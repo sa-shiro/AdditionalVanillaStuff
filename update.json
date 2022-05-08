@@ -1,0 +1,10 @@
+{
+  "homepage": "https://www.curseforge.com/minecraft/mc-mods/additional-vanilla-stuff",
+  "1.18.2": {
+    "1.0.0": "Initial Release"
+  },
+  "promos": {
+    "1.18.2-latest": "1.0.0.20220118",
+    "1.18.2-recommended": "1.0.0.20220118"
+  }
+}

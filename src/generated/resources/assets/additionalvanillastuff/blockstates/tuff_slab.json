@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "additionalvanillastuff:block/tuff_slab_top"
+    },
+    "type=bottom": {
+      "model": "additionalvanillastuff:block/tuff_slab"
+    },
+    "type=double": {
+      "model": "minecraft:block/tuff"
+    }
+  }
+}
