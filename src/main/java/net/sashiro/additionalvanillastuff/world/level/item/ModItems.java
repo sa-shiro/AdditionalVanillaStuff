@@ -1,11 +1,11 @@
 package net.sashiro.additionalvanillastuff.world.level.item;
 
 
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
+import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fmllegacy.RegistryObject;
 import net.sashiro.additionalvanillastuff.AdditionalVanillaStuff;
 import net.sashiro.additionalvanillastuff.world.level.block.ModBlocks;
 
@@ -13,7 +13,7 @@ import static net.sashiro.additionalvanillastuff.event.ModRegistryEvent.ITEM_REG
 
 @Mod.EventBusSubscriber(modid = AdditionalVanillaStuff.MOD_ID)
 public class ModItems {
-    private static final Item.Properties PROPERTIES = new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS);
+    private static final Item.Properties PROPERTIES = new Item.Properties().tab(ItemGroup.TAB_DECORATIONS);
 
     public static final RegistryObject<Item> WHITE_TERRACOTTA_STAIRS = ITEM_REGISTRY.register("white_terracotta_stairs", () -> new BlockItem(ModBlocks.WHITE_TERRACOTTA_STAIRS.get(), PROPERTIES));
     public static final RegistryObject<Item> ORANGE_TERRACOTTA_STAIRS = ITEM_REGISTRY.register("orange_terracotta_stairs", () -> new BlockItem(ModBlocks.ORANGE_TERRACOTTA_STAIRS.get(), PROPERTIES));
@@ -87,9 +87,6 @@ public class ModItems {
     public static final RegistryObject<Item> NETHERITE_BLOCK_STAIRS = ITEM_REGISTRY.register("netherite_block_stairs", () -> new BlockItem(ModBlocks.NETHERITE_BLOCK_STAIRS.get(), PROPERTIES));
     public static final RegistryObject<Item> LAPIS_BLOCK_STAIRS = ITEM_REGISTRY.register("lapis_block_stairs", () -> new BlockItem(ModBlocks.LAPIS_BLOCK_STAIRS.get(), PROPERTIES));
     public static final RegistryObject<Item> EMERALD_BLOCK_STAIRS = ITEM_REGISTRY.register("emerald_block_stairs", () -> new BlockItem(ModBlocks.EMERALD_BLOCK_STAIRS.get(), PROPERTIES));
-    public static final RegistryObject<Item> CALCITE_STAIRS = ITEM_REGISTRY.register("calcite_stairs", () -> new BlockItem(ModBlocks.CALCITE_STAIRS.get(), PROPERTIES));
-    public static final RegistryObject<Item> TUFF_STAIRS = ITEM_REGISTRY.register("tuff_stairs", () -> new BlockItem(ModBlocks.TUFF_STAIRS.get(), PROPERTIES));
-    public static final RegistryObject<Item> SMOOTH_BASALT_STAIRS = ITEM_REGISTRY.register("smooth_basalt_stairs", () -> new BlockItem(ModBlocks.SMOOTH_BASALT_STAIRS.get(), PROPERTIES));
     public static final RegistryObject<Item> OBSIDIAN_STAIRS = ITEM_REGISTRY.register("obsidian_stairs", () -> new BlockItem(ModBlocks.OBSIDIAN_STAIRS.get(), PROPERTIES));
     public static final RegistryObject<Item> CRYING_OBSIDIAN_STAIRS = ITEM_REGISTRY.register("crying_obsidian_stairs", () -> new BlockItem(ModBlocks.CRYING_OBSIDIAN_STAIRS.get(), PROPERTIES));
     public static final RegistryObject<Item> WHITE_TERRACOTTA_SLAB = ITEM_REGISTRY.register("white_terracotta_slab", () -> new BlockItem(ModBlocks.WHITE_TERRACOTTA_SLAB.get(), PROPERTIES));
@@ -164,9 +161,6 @@ public class ModItems {
     public static final RegistryObject<Item> NETHERITE_BLOCK_SLAB = ITEM_REGISTRY.register("netherite_block_slab", () -> new BlockItem(ModBlocks.NETHERITE_BLOCK_SLAB.get(), PROPERTIES));
     public static final RegistryObject<Item> LAPIS_BLOCK_SLAB = ITEM_REGISTRY.register("lapis_block_slab", () -> new BlockItem(ModBlocks.LAPIS_BLOCK_SLAB.get(), PROPERTIES));
     public static final RegistryObject<Item> EMERALD_BLOCK_SLAB = ITEM_REGISTRY.register("emerald_block_slab", () -> new BlockItem(ModBlocks.EMERALD_BLOCK_SLAB.get(), PROPERTIES));
-    public static final RegistryObject<Item> CALCITE_SLAB = ITEM_REGISTRY.register("calcite_slab", () -> new BlockItem(ModBlocks.CALCITE_SLAB.get(), PROPERTIES));
-    public static final RegistryObject<Item> TUFF_SLAB = ITEM_REGISTRY.register("tuff_slab", () -> new BlockItem(ModBlocks.TUFF_SLAB.get(), PROPERTIES));
-    public static final RegistryObject<Item> SMOOTH_BASALT_SLAB = ITEM_REGISTRY.register("smooth_basalt_slab", () -> new BlockItem(ModBlocks.SMOOTH_BASALT_SLAB.get(), PROPERTIES));
     public static final RegistryObject<Item> OBSIDIAN_SLAB = ITEM_REGISTRY.register("obsidian_slab", () -> new BlockItem(ModBlocks.OBSIDIAN_SLAB.get(), PROPERTIES));
     public static final RegistryObject<Item> CRYING_OBSIDIAN_SLAB = ITEM_REGISTRY.register("crying_obsidian_slab", () -> new BlockItem(ModBlocks.CRYING_OBSIDIAN_SLAB.get(), PROPERTIES));
     public static final RegistryObject<Item> WHITE_TERRACOTTA_WALL = ITEM_REGISTRY.register("white_terracotta_wall", () -> new BlockItem(ModBlocks.WHITE_TERRACOTTA_WALL.get(), PROPERTIES));
@@ -241,13 +235,6 @@ public class ModItems {
     public static final RegistryObject<Item> NETHERITE_BLOCK_WALL = ITEM_REGISTRY.register("netherite_block_wall", () -> new BlockItem(ModBlocks.NETHERITE_BLOCK_WALL.get(), PROPERTIES));
     public static final RegistryObject<Item> LAPIS_BLOCK_WALL = ITEM_REGISTRY.register("lapis_block_wall", () -> new BlockItem(ModBlocks.LAPIS_BLOCK_WALL.get(), PROPERTIES));
     public static final RegistryObject<Item> EMERALD_BLOCK_WALL = ITEM_REGISTRY.register("emerald_block_wall", () -> new BlockItem(ModBlocks.EMERALD_BLOCK_WALL.get(), PROPERTIES));
-    public static final RegistryObject<Item> CALCITE_WALL = ITEM_REGISTRY.register("calcite_wall", () -> new BlockItem(ModBlocks.CALCITE_WALL.get(), PROPERTIES));
-    public static final RegistryObject<Item> TUFF_WALL = ITEM_REGISTRY.register("tuff_wall", () -> new BlockItem(ModBlocks.TUFF_WALL.get(), PROPERTIES));
-    public static final RegistryObject<Item> SMOOTH_BASALT_WALL = ITEM_REGISTRY.register("smooth_basalt_wall", () -> new BlockItem(ModBlocks.SMOOTH_BASALT_WALL.get(), PROPERTIES));
     public static final RegistryObject<Item> OBSIDIAN_WALL = ITEM_REGISTRY.register("obsidian_wall", () -> new BlockItem(ModBlocks.OBSIDIAN_WALL.get(), PROPERTIES));
     public static final RegistryObject<Item> CRYING_OBSIDIAN_WALL = ITEM_REGISTRY.register("crying_obsidian_wall", () -> new BlockItem(ModBlocks.CRYING_OBSIDIAN_WALL.get(), PROPERTIES));
-
-    //public static final RegistryObject<Item> DEEPSLATE_GRAVEL = ITEM_REGISTRY.register("deepslate_gravel", () -> new BlockItem(ModBlocks.DEEPSLATE_GRAVEL.get(), PROPERTIES));
-    //public static final RegistryObject<Item> DEEPSLATE_SAND = ITEM_REGISTRY.register("deepslate_sand", () -> new BlockItem(ModBlocks.DEEPSLATE_SAND.get(), PROPERTIES));
-    //public static final RegistryObject<Item> GOLD_BLOCK_BARS = ITEM_REGISTRY.register("gold_block_bars", () -> new BlockItem(ModBlocks.GOLD_BLOCK_BARS.get(), PROPERTIES));
 }
