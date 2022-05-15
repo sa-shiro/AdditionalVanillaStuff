@@ -46,7 +46,7 @@ jobs:
 
           files: build/libs/*.jar
 
-          name: [1.16.5]additionalvanillastuff-1.0.0
+          name: "[1.16.5]additionalvanillastuff-1.0.0"
           version: 1.0.0
           version-type: release
           changelog-file: changelog.log
