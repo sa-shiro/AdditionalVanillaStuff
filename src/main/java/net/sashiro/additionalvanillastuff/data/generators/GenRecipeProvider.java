@@ -4,11 +4,14 @@ import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.registries.RegistryObject;
 import net.sashiro.additionalvanillastuff.AdditionalVanillaStuff;
 import net.sashiro.additionalvanillastuff.event.ModRegistryEvent;
 
@@ -35,7 +38,7 @@ public class GenRecipeProvider extends RecipeProvider {
                     vanillaBLock = mcBlock;
                     if (!loc.contains("wool")) {
                         if (loc.contains("stairs")) {
-                            stonecutterResultFromBase(consumer, block.get(), vanillaBLock);
+                            SingleItemRecipeBuilder.stonecutting(Ingredient.of(block.get()), vanillaBLock).save(consumer, vanillaBLock.getName() + "_to_" + block.get().getName() + "_stonecutting");
                             ShapedRecipeBuilder.shaped(block.get(), 4) // result
                                     .define('#', vanillaBLock) // ingredient
                                     .pattern("#  ")
@@ -45,7 +48,7 @@ public class GenRecipeProvider extends RecipeProvider {
                                     .save(consumer, new ResourceLocation(AdditionalVanillaStuff.MOD_ID, "shaped_" + loc));
                         }
                         else if (loc.contains("slab")) {
-                            stonecutterResultFromBase(consumer, block.get(), vanillaBLock, 2);
+                            SingleItemRecipeBuilder.stonecutting(Ingredient.of(block.get()), vanillaBLock, 2).save(consumer, vanillaBLock.getName() + "_to_" + block.get().getName() + "_stonecutting");
                             ShapedRecipeBuilder.shaped(block.get(), 6) // result
                                     .define('#', vanillaBLock) // ingredient
                                     .pattern("###")
@@ -53,7 +56,7 @@ public class GenRecipeProvider extends RecipeProvider {
                                     .save(consumer, new ResourceLocation(AdditionalVanillaStuff.MOD_ID, "shaped_" + loc));
                         }
                         else if (loc.contains("wall")) {
-                            stonecutterResultFromBase(consumer, block.get(), vanillaBLock);
+                            SingleItemRecipeBuilder.stonecutting(Ingredient.of(block.get()), vanillaBLock).save(consumer, vanillaBLock.getName() + "_to_" + block.get().getName() + "_stonecutting");
                             ShapedRecipeBuilder.shaped(block.get(), 6) // result
                                     .define('#', vanillaBLock) // ingredient
                                     .pattern("###")
@@ -89,15 +92,5 @@ public class GenRecipeProvider extends RecipeProvider {
                 }
             }
         }
-
-/*
-                    ShapedRecipeBuilder.shaped(blocks.get(i).get()) // result
-                            .define('#', blocks.get(i - 1).get()) // ingredient
-                            .pattern("###")
-                            .pattern("###")
-                            .pattern("###")
-                            .unlockedBy("has_item", has(blocks.get(i - 1).get().asItem()))
-                            .save(consumer, new ResourceLocation("compressedblocks", "shaped_" + blockName.replace("compressedblocks:", "")));
-        */
     }
 }

@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.sashiro.additionalvanillastuff.AdditionalVanillaStuff;
 import net.sashiro.additionalvanillastuff.event.ModRegistryEvent;
 

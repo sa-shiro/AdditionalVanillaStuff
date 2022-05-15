@@ -3,7 +3,7 @@ package net.sashiro.additionalvanillastuff.world.level.block;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.sashiro.additionalvanillastuff.AdditionalVanillaStuff;
 
 import static net.sashiro.additionalvanillastuff.event.ModRegistryEvent.BLOCK_REGISTRY;

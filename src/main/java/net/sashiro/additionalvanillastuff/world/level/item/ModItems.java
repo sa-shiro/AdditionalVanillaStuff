@@ -5,7 +5,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.fmllegacy.RegistryObject;
 import net.sashiro.additionalvanillastuff.AdditionalVanillaStuff;
 import net.sashiro.additionalvanillastuff.world.level.block.ModBlocks;
 
