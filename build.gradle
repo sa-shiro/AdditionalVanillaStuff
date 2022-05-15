@@ -12,7 +12,7 @@ buildscript {
 apply plugin: 'net.minecraftforge.gradle'
 
 group = 'net.sashiro'
-version = '1.0.0'
+version = '1.0.1'
 
 java {
     archivesBaseName = 'additionalvanillastuff'

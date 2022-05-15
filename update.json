@@ -1,10 +1,27 @@
 {
   "homepage": "https://www.curseforge.com/minecraft/mc-mods/additional-cosmetic-stuff",
-  "1.18.2": {
-    "1.0.0": "Initial Release"
-  },
   "promos": {
-    "1.18.2-latest": "1.0.0",
+    "1.16-latest": "1.0.0",
+    "1.16-recommended": "1.0.0",
+    "1.16.1-latest": "1.0.0",
+    "1.16.1-recommended": "1.0.0",
+    "1.16.2-latest": "1.0.0",
+    "1.16.2-recommended": "1.0.0",
+    "1.16.3-latest": "1.0.0",
+    "1.16.3-recommended": "1.0.0",
+    "1.16.4-latest": "1.0.0",
+    "1.16.4-recommended": "1.0.0",
+    "1.16.5-latest": "1.0.0",
+    "1.16.5-recommended": "1.0.0",
+    "1.17-latest": "1.0.0",
+    "1.17-recommended": "1.0.0",
+    "1.17.1-latest": "1.0.0",
+    "1.17.2-recommended": "1.0.0",
+    "1.18-latest": "1.0.1",
+    "1.18-recommended": "1.0.0",
+    "1.18.1-latest": "1.0.1",
+    "1.18.1-recommended": "1.0.0",
+    "1.18.2-latest": "1.0.1",
     "1.18.2-recommended": "1.0.0"
   }
 }
