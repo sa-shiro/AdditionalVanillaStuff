@@ -1,5 +1,5 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-
+/*
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -30,10 +30,11 @@ public class GenItemModelProvider extends ItemModelProvider {
             }
             if (!name.contains("wall")) {
                 withExistingParent(name, modLoc("block/" + name));
-            } /*
-            if (name.contains("bars")) {
-                singleTexture(name, new ResourceLocation("item/generated"), "layer0", new ResourceLocation("block/NAME"));
-            } */
+            }
+            //if (name.contains("bars")) {
+            //    singleTexture(name, new ResourceLocation("item/generated"), "layer0", new ResourceLocation("block/NAME"));
+            //}
         }
     }
 }
+ */

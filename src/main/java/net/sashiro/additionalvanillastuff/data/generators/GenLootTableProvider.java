@@ -1,5 +1,5 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-
+/*
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
 import net.minecraft.data.DataGenerator;
@@ -55,3 +55,4 @@ public class GenLootTableProvider extends LootTableProvider {
         }
     }
 }
+ */

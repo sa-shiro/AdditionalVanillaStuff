@@ -1,5 +1,5 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-
+/*
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -33,3 +33,4 @@ public class GenLanguageProvider extends LanguageProvider {
         }
     }
 }
+ */

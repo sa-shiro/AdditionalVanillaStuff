@@ -46,16 +46,18 @@ jobs:
 
           files: build/libs/*.jar
 
-          name: "[1.18]additionalvanillastuff-1.0.0"
+          name: "[1.19]additionalvanillastuff-1.0.1"
           version: 1.0.1
           version-type: release
-          changelog-file: update.json
+          changelog-file: changelog.md
 
           loaders: |
             forge
           game-versions: |
-            1.18
-            1.18.1
-            1.18.2
+            1.19
+            1.19.1
+            1.19.2
+            1.19.3
+            1.19.4
           java: |
             17

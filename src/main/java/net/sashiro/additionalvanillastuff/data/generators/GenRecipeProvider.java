@@ -1,5 +1,5 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-
+/*
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeProvider;
@@ -98,6 +98,7 @@ public class GenRecipeProvider extends RecipeProvider {
                             .pattern("###")
                             .unlockedBy("has_item", has(blocks.get(i - 1).get().asItem()))
                             .save(consumer, new ResourceLocation("compressedblocks", "shaped_" + blockName.replace("compressedblocks:", "")));
-        */
+/
     }
 }
+*/

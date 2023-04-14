@@ -13,7 +13,7 @@ import static net.sashiro.additionalvanillastuff.event.ModRegistryEvent.ITEM_REG
 
 @Mod.EventBusSubscriber(modid = AdditionalVanillaStuff.MOD_ID)
 public class ModItems {
-    private static final Item.Properties PROPERTIES = new Item.Properties().tab(CreativeModeTab.TAB_DECORATIONS);
+    private static final Item.Properties PROPERTIES = new Item.Properties();
 
     public static final RegistryObject<Item> WHITE_TERRACOTTA_STAIRS = ITEM_REGISTRY.register("white_terracotta_stairs", () -> new BlockItem(ModBlocks.WHITE_TERRACOTTA_STAIRS.get(), PROPERTIES));
     public static final RegistryObject<Item> ORANGE_TERRACOTTA_STAIRS = ITEM_REGISTRY.register("orange_terracotta_stairs", () -> new BlockItem(ModBlocks.ORANGE_TERRACOTTA_STAIRS.get(), PROPERTIES));

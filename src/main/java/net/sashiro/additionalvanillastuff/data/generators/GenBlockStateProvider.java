@@ -1,5 +1,5 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-
+/*
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -80,3 +80,4 @@ public class GenBlockStateProvider extends BlockStateProvider {
         );
     }
 }
+*/

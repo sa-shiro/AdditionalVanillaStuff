@@ -1,5 +1,5 @@
 package net.sashiro.additionalvanillastuff.data;
-
+/*
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -23,3 +23,4 @@ public class DataGen {
         gen.addProvider(new GenTagProvider(gen, AdditionalVanillaStuff.MOD_ID, existingFileHelper));
     }
 }
+ */
