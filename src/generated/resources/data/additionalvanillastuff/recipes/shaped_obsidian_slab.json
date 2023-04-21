@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
+  "category": "building",
   "key": {
     "#": {
       "item": "minecraft:obsidian"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "additionalvanillastuff:obsidian_slab",
-    "count": 6
-  }
+    "count": 6,
+    "item": "additionalvanillastuff:obsidian_slab"
+  },
+  "show_notification": true
 }

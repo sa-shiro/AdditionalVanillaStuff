@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "minecraft:lapis_block"
   },
-  "result": "additionalvanillastuff:lapis_block_stairs",
-  "count": 1
+  "result": "additionalvanillastuff:lapis_block_stairs"
 }

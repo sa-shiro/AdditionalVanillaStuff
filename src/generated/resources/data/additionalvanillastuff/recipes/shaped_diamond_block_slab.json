@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
+  "category": "building",
   "key": {
     "#": {
       "item": "minecraft:diamond_block"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "additionalvanillastuff:diamond_block_slab",
-    "count": 6
-  }
+    "count": 6,
+    "item": "additionalvanillastuff:diamond_block_slab"
+  },
+  "show_notification": true
 }

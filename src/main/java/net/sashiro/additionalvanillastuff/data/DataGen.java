@@ -1,26 +1,31 @@
 package net.sashiro.additionalvanillastuff.data;
-/*
+
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.data.event.GatherDataEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.forge.event.lifecycle.GatherDataEvent;
 import net.sashiro.additionalvanillastuff.AdditionalVanillaStuff;
 import net.sashiro.additionalvanillastuff.data.generators.*;
+
+import java.util.concurrent.CompletableFuture;
 
 @Mod.EventBusSubscriber(modid = AdditionalVanillaStuff.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DataGen {
     @SubscribeEvent
     public static void gatherData(GatherDataEvent e) {
         DataGenerator gen = e.getGenerator();
+        PackOutput packOutput = gen.getPackOutput();
         ExistingFileHelper existingFileHelper = e.getExistingFileHelper();
+        CompletableFuture<HolderLookup.Provider> lookupProvider = e.getLookupProvider();
 
-        gen.addProvider(new GenBlockStateProvider(gen, existingFileHelper));
-        gen.addProvider(new GenItemModelProvider(gen, existingFileHelper));
-        gen.addProvider(new GenLanguageProvider(gen, "en_us"));
-        gen.addProvider(new GenRecipeProvider(gen));
-        gen.addProvider(new GenLootTableProvider(gen));
-        gen.addProvider(new GenTagProvider(gen, AdditionalVanillaStuff.MOD_ID, existingFileHelper));
+        gen.addProvider(true, new GenBlockStateProvider(packOutput, existingFileHelper));
+        gen.addProvider(true, new GenItemModelProvider(packOutput, existingFileHelper));
+        gen.addProvider(true, new GenLanguageProvider(packOutput, "en_us"));
+        gen.addProvider(true, new GenRecipeProvider(packOutput));
+        gen.addProvider(true, GenLootTableProvider.create(packOutput));
+        gen.addProvider(true, new GenTagProvider(packOutput, lookupProvider, AdditionalVanillaStuff.MOD_ID, existingFileHelper));
     }
 }
- */

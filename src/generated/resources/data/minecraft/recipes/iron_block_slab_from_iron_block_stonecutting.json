@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 2,
   "ingredient": {
     "item": "minecraft:iron_block"
   },
-  "result": "additionalvanillastuff:iron_block_slab",
-  "count": 2
+  "result": "additionalvanillastuff:iron_block_slab"
 }

@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 2,
   "ingredient": {
     "item": "minecraft:lime_concrete"
   },
-  "result": "additionalvanillastuff:lime_concrete_slab",
-  "count": 2
+  "result": "additionalvanillastuff:lime_concrete_slab"
 }

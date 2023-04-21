@@ -1,6 +1,6 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-/*
-import net.minecraft.data.DataGenerator;
+
+import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
 import net.minecraftforge.registries.RegistryObject;
@@ -8,8 +8,8 @@ import net.sashiro.additionalvanillastuff.AdditionalVanillaStuff;
 import net.sashiro.additionalvanillastuff.event.ModRegistryEvent;
 
 public class GenLanguageProvider extends LanguageProvider {
-    public GenLanguageProvider(DataGenerator gen, String locale) {
-        super(gen, AdditionalVanillaStuff.MOD_ID, locale);
+    public GenLanguageProvider(PackOutput packOutput, String locale) {
+        super(packOutput, AdditionalVanillaStuff.MOD_ID, locale);
     }
 
     private static String stringFormat(String formatString) {
@@ -26,11 +26,14 @@ public class GenLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         for (RegistryObject<Block> block : ModRegistryEvent.BLOCK_REGISTRY.getEntries()) {
-            String name = block.get().getRegistryName().toString().replace("additionalvanillastuff:", "");
+            String name = block.get().getDescriptionId().replace("block.additionalvanillastuff.", "");
             String loc = name.replace("_", " ");
             add("block.additionalvanillastuff." + name, stringFormat(loc));
             //add("item.additionalvanillastuff." + name, stringFormat(loc));
         }
+
+        add("itemGroup.additionalvanillastuff.stairs", "Stairs");
+        add("itemGroup.additionalvanillastuff.slabs", "Slabs");
+        add("itemGroup.additionalvanillastuff.walls", "Walls");
     }
 }
- */

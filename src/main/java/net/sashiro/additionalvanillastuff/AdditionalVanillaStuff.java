@@ -1,6 +1,5 @@
 package net.sashiro.additionalvanillastuff;
 
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -8,7 +7,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.RegistryObject;
 import net.sashiro.additionalvanillastuff.event.ModRegistryEvent;
-import net.sashiro.additionalvanillastuff.world.level.item.ModItems;
+import net.sashiro.additionalvanillastuff.world.level.item.ItemGroups;
 
 @Mod(AdditionalVanillaStuff.MOD_ID)
 public class AdditionalVanillaStuff {
@@ -24,9 +23,15 @@ public class AdditionalVanillaStuff {
 
 
     private void addItemsToCreativeTab(CreativeModeTabEvent.BuildContents event) {
-        if (event.getTab() == CreativeModeTabs.BUILDING_BLOCKS) {
-            for (RegistryObject<Item> item : ModRegistryEvent.ITEM_REGISTRY.getEntries()) {
-                event.accept(item.get());
+        for (RegistryObject<Item> item : ModRegistryEvent.ITEM_REGISTRY.getEntries()) {
+            if (event.getTab() == ItemGroups.GROUP_STAIRS) {
+                if (item.get().getDescription().toString().contains("stair")) event.accept(item.get());
+            }
+            if (event.getTab() == ItemGroups.GROUP_SLABS) {
+                if (item.get().getDescription().toString().contains("slab")) event.accept(item.get());
+            }
+            if (event.getTab() == ItemGroups.GROUP_WALLS) {
+                if (item.get().getDescription().toString().contains("wall")) event.accept(item.get());
             }
         }
     }

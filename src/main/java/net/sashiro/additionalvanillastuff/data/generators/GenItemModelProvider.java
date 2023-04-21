@@ -1,6 +1,6 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-/*
-import net.minecraft.data.DataGenerator;
+
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
@@ -10,9 +10,10 @@ import net.minecraftforge.registries.RegistryObject;
 import net.sashiro.additionalvanillastuff.AdditionalVanillaStuff;
 import net.sashiro.additionalvanillastuff.event.ModRegistryEvent;
 
+@SuppressWarnings("unused")
 public class GenItemModelProvider extends ItemModelProvider {
-    public GenItemModelProvider(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, AdditionalVanillaStuff.MOD_ID, existingFileHelper);
+    public GenItemModelProvider(PackOutput packOutput, ExistingFileHelper existingFileHelper) {
+        super(packOutput, AdditionalVanillaStuff.MOD_ID, existingFileHelper);
     }
 
     @Override
@@ -22,7 +23,7 @@ public class GenItemModelProvider extends ItemModelProvider {
 
         for (RegistryObject<Block> block : ModRegistryEvent.BLOCK_REGISTRY.getEntries()) {
             assert false;
-            String name = block.get().getRegistryName().toString().replace("additionalvanillastuff:", "");
+            String name = block.get().getDescriptionId().replace("block.additionalvanillastuff.", "");
 
             if (name.contains("wall")) {
                 String loc = name.replace("_wall", "");
@@ -37,4 +38,3 @@ public class GenItemModelProvider extends ItemModelProvider {
         }
     }
 }
- */

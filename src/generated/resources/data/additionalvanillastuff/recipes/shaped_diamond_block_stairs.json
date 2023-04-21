@@ -1,17 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
+  "category": "building",
   "key": {
     "#": {
       "item": "minecraft:diamond_block"
     }
   },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
   "result": {
-    "item": "additionalvanillastuff:diamond_block_stairs",
-    "count": 4
-  }
+    "count": 4,
+    "item": "additionalvanillastuff:diamond_block_stairs"
+  },
+  "show_notification": true
 }
