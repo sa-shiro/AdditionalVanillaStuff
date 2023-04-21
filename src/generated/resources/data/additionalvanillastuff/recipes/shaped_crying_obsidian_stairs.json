@@ -1,17 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
+  "category": "building",
   "key": {
     "#": {
       "item": "minecraft:crying_obsidian"
     }
   },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
   "result": {
-    "item": "additionalvanillastuff:crying_obsidian_stairs",
-    "count": 4
-  }
+    "count": 4,
+    "item": "additionalvanillastuff:crying_obsidian_stairs"
+  },
+  "show_notification": true
 }

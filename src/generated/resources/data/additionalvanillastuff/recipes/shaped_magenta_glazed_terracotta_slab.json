@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
+  "category": "building",
   "key": {
     "#": {
       "item": "minecraft:magenta_glazed_terracotta"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "additionalvanillastuff:magenta_glazed_terracotta_slab",
-    "count": 6
-  }
+    "count": 6,
+    "item": "additionalvanillastuff:magenta_glazed_terracotta_slab"
+  },
+  "show_notification": true
 }

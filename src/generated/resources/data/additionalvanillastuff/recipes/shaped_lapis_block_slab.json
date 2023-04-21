@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
+  "category": "building",
   "key": {
     "#": {
       "item": "minecraft:lapis_block"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "additionalvanillastuff:lapis_block_slab",
-    "count": 6
-  }
+    "count": 6,
+    "item": "additionalvanillastuff:lapis_block_slab"
+  },
+  "show_notification": true
 }

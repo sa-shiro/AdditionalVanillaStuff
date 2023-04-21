@@ -1,3 +1,5 @@
-# [ 1.19 ]
+# Ver 1.0.3 [ 1.19 - 1.19.2 ]
 
-update to 1.19
+code update  
+new creative inventory  
+Dirt Stairs, Slabs and Walls

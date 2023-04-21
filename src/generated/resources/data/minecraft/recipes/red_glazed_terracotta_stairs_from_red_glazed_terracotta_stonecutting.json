@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "minecraft:red_glazed_terracotta"
   },
-  "result": "additionalvanillastuff:red_glazed_terracotta_stairs",
-  "count": 1
+  "result": "additionalvanillastuff:red_glazed_terracotta_stairs"
 }

@@ -1,5 +1,5 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-/*
+
 import net.minecraft.core.Direction;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
@@ -25,20 +25,17 @@ public class GenBlockStateProvider extends BlockStateProvider {
         assert false;
 
         for (RegistryObject<Block> block : ModRegistryEvent.BLOCK_REGISTRY.getEntries()) {
-            String blockName = block.get().getRegistryName().toString();
-            String blockWall = block.get().getRegistryName().getPath().replace("_wall", "");
-            String blockStairs = block.get().getRegistryName().getPath().replace("_stairs", "");
-            String blockSlab = block.get().getRegistryName().getPath().replace("_slab", "");
-            String blockBars = block.get().getRegistryName().getPath().replace("_bars", "");
+            String blockName = block.get().getDescriptionId().replace("block.additionalvanillastuff.", "");
+            String blockNameClean = blockName.replace("_wall", "").replace("_stairs", "").replace("_slab", "").replace("_bars", "");
 
             if (blockName.contains("wall")) {
-                wallBlock((WallBlock) block.get(), new ResourceLocation("block/" + blockWall));
+                wallBlock((WallBlock) block.get(), new ResourceLocation("block/" + blockNameClean));
             } else if (blockName.contains("stairs")) {
-                stairsBlock((StairBlock) block.get(), new ResourceLocation("block/" + blockStairs));
+                stairsBlock((StairBlock) block.get(), new ResourceLocation("block/" + blockNameClean));
             } else if (blockName.contains("slab")) {
-                slabBlock((SlabBlock) block.get(), new ResourceLocation("block/" + blockSlab), new ResourceLocation("block/" + blockSlab));
+                slabBlock((SlabBlock) block.get(), new ResourceLocation("block/" + blockNameClean), new ResourceLocation("block/" + blockNameClean));
             } else if (blockName.contains("bars")) {
-                paneBlock((IronBarsBlock) block.get(),new ResourceLocation("block/" + blockBars), new ResourceLocation("block/" + blockBars));
+                paneBlock((IronBarsBlock) block.get(), new ResourceLocation("block/" + blockNameClean), new ResourceLocation("block/" + blockNameClean));
             } else if (blockName.contains("gravel")) {
                 makeSimpleBLock(block.get(), "gravel", "deepslate_gravel_overlay");
             } else if (blockName.contains("sand")) {
@@ -51,7 +48,7 @@ public class GenBlockStateProvider extends BlockStateProvider {
         ModelFile.UncheckedModelFile blockBlock = new ModelFile.UncheckedModelFile("block/block");
         simpleBlock(
                 block, models().cubeAll(
-                                block.getRegistryName().toString(),
+                                block.getName().toString(),
                                 new ResourceLocation("block/" + name)
                         )
                         .texture("particle", new ResourceLocation("block/" + name))
@@ -80,4 +77,3 @@ public class GenBlockStateProvider extends BlockStateProvider {
         );
     }
 }
-*/

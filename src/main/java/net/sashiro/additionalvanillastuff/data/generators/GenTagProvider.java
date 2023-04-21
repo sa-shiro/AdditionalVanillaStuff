@@ -1,5 +1,5 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-/*
+
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.tags.BlockTags;
@@ -23,7 +23,7 @@ public class GenTagProvider extends BlockTagsProvider {
         for (RegistryObject<Block> registryObject : ModRegistryEvent.BLOCK_REGISTRY.getEntries()) {
             assert false;
             Block block = registryObject.get();
-            String name = block.getRegistryName().toString();
+            String name = block.getDescriptionId().replace("block.additionalvanillastuff.", "");
 
             if (name.contains("wall")) {
                 tag(BlockTags.WALLS).add(block);
@@ -38,4 +38,3 @@ public class GenTagProvider extends BlockTagsProvider {
         }
     }
 }
- */

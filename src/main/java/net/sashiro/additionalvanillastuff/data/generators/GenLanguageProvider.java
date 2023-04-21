@@ -1,5 +1,5 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-/*
+
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
@@ -26,11 +26,13 @@ public class GenLanguageProvider extends LanguageProvider {
     @Override
     protected void addTranslations() {
         for (RegistryObject<Block> block : ModRegistryEvent.BLOCK_REGISTRY.getEntries()) {
-            String name = block.get().getRegistryName().toString().replace("additionalvanillastuff:", "");
+            String name = block.get().getDescriptionId().replace("block.additionalvanillastuff.", "");
             String loc = name.replace("_", " ");
             add("block.additionalvanillastuff." + name, stringFormat(loc));
             //add("item.additionalvanillastuff." + name, stringFormat(loc));
         }
+        add("itemGroup.stairstab.", "Stairs");
+        add("itemGroup.slabstab.", "Slabs");
+        add("itemGroup.wallstab.", "Walls");
     }
 }
- */

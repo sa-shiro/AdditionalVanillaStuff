@@ -1,17 +1,19 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#  ",
-    "## ",
-    "###"
-  ],
+  "category": "building",
   "key": {
     "#": {
       "item": "minecraft:cyan_terracotta"
     }
   },
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
   "result": {
-    "item": "additionalvanillastuff:cyan_terracotta_stairs",
-    "count": 4
-  }
+    "count": 4,
+    "item": "additionalvanillastuff:cyan_terracotta_stairs"
+  },
+  "show_notification": true
 }

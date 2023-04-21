@@ -1,5 +1,5 @@
 package net.sashiro.additionalvanillastuff.data.generators;
-/*
+
 import net.minecraft.data.DataGenerator;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
@@ -22,7 +22,7 @@ public class GenItemModelProvider extends ItemModelProvider {
 
         for (RegistryObject<Block> block : ModRegistryEvent.BLOCK_REGISTRY.getEntries()) {
             assert false;
-            String name = block.get().getRegistryName().toString().replace("additionalvanillastuff:", "");
+            String name = block.get().getDescriptionId().replace("block.additionalvanillastuff.", "");
 
             if (name.contains("wall")) {
                 String loc = name.replace("_wall", "");
@@ -30,11 +30,10 @@ public class GenItemModelProvider extends ItemModelProvider {
             }
             if (!name.contains("wall")) {
                 withExistingParent(name, modLoc("block/" + name));
-            }
-            //if (name.contains("bars")) {
-            //    singleTexture(name, new ResourceLocation("item/generated"), "layer0", new ResourceLocation("block/NAME"));
-            //}
+            } /*
+            if (name.contains("bars")) {
+                singleTexture(name, new ResourceLocation("item/generated"), "layer0", new ResourceLocation("block/NAME"));
+            } */
         }
     }
 }
- */

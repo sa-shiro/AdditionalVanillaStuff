@@ -1,6 +1,6 @@
 {
-  "replace": false,
   "values": [
+    "additionalvanillastuff:dirt_stairs",
     "additionalvanillastuff:white_terracotta_stairs",
     "additionalvanillastuff:orange_terracotta_stairs",
     "additionalvanillastuff:magenta_terracotta_stairs",
@@ -62,6 +62,7 @@
     "additionalvanillastuff:smooth_basalt_stairs",
     "additionalvanillastuff:obsidian_stairs",
     "additionalvanillastuff:crying_obsidian_stairs",
+    "additionalvanillastuff:dirt_slab",
     "additionalvanillastuff:white_terracotta_slab",
     "additionalvanillastuff:orange_terracotta_slab",
     "additionalvanillastuff:magenta_terracotta_slab",
@@ -123,6 +124,7 @@
     "additionalvanillastuff:smooth_basalt_slab",
     "additionalvanillastuff:obsidian_slab",
     "additionalvanillastuff:crying_obsidian_slab",
+    "additionalvanillastuff:dirt_wall",
     "additionalvanillastuff:white_terracotta_wall",
     "additionalvanillastuff:orange_terracotta_wall",
     "additionalvanillastuff:magenta_terracotta_wall",

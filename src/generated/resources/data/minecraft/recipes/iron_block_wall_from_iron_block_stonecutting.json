@@ -1,8 +1,8 @@
 {
   "type": "minecraft:stonecutting",
+  "count": 1,
   "ingredient": {
     "item": "minecraft:iron_block"
   },
-  "result": "additionalvanillastuff:iron_block_wall",
-  "count": 1
+  "result": "additionalvanillastuff:iron_block_wall"
 }
