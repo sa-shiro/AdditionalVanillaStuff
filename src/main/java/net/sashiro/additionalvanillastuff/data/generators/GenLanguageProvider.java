@@ -3,7 +3,7 @@ package net.sashiro.additionalvanillastuff.data.generators;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.LanguageProvider;
-import net.minecraftforge.fmllegacy.RegistryObject;
+import net.minecraftforge.registries.RegistryObject;
 import net.sashiro.additionalvanillastuff.AdditionalVanillaStuff;
 import net.sashiro.additionalvanillastuff.event.ModRegistryEvent;
 
@@ -31,5 +31,8 @@ public class GenLanguageProvider extends LanguageProvider {
             add("block.additionalvanillastuff." + name, stringFormat(loc));
             //add("item.additionalvanillastuff." + name, stringFormat(loc));
         }
+        add("itemGroup.stairstab.", "Stairs");
+        add("itemGroup.slabstab.", "Slabs");
+        add("itemGroup.wallstab.", "Walls");
     }
 }

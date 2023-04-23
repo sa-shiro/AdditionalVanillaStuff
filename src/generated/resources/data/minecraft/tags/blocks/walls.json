@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "additionalvanillastuff:dirt_wall",
     "additionalvanillastuff:white_terracotta_wall",
     "additionalvanillastuff:orange_terracotta_wall",
     "additionalvanillastuff:magenta_terracotta_wall",

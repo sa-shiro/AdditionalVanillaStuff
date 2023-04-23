@@ -56,6 +56,9 @@
   "block.additionalvanillastuff.diamond_block_slab": "Diamond Block Slab",
   "block.additionalvanillastuff.diamond_block_stairs": "Diamond Block Stairs",
   "block.additionalvanillastuff.diamond_block_wall": "Diamond Block Wall",
+  "block.additionalvanillastuff.dirt_slab": "Dirt Slab",
+  "block.additionalvanillastuff.dirt_stairs": "Dirt Stairs",
+  "block.additionalvanillastuff.dirt_wall": "Dirt Wall",
   "block.additionalvanillastuff.emerald_block_slab": "Emerald Block Slab",
   "block.additionalvanillastuff.emerald_block_stairs": "Emerald Block Stairs",
   "block.additionalvanillastuff.emerald_block_wall": "Emerald Block Wall",
@@ -229,5 +232,8 @@
   "block.additionalvanillastuff.yellow_terracotta_wall": "Yellow Terracotta Wall",
   "block.additionalvanillastuff.yellow_wool_slab": "Yellow Wool Slab",
   "block.additionalvanillastuff.yellow_wool_stairs": "Yellow Wool Stairs",
-  "block.additionalvanillastuff.yellow_wool_wall": "Yellow Wool Wall"
+  "block.additionalvanillastuff.yellow_wool_wall": "Yellow Wool Wall",
+  "itemGroup.slabstab": "Slabs",
+  "itemGroup.stairstab": "Stairs",
+  "itemGroup.wallstab": "Walls"
 }

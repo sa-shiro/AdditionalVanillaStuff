@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "additionalvanillastuff:dirt_stairs",
     "additionalvanillastuff:white_terracotta_stairs",
     "additionalvanillastuff:orange_terracotta_stairs",
     "additionalvanillastuff:magenta_terracotta_stairs",
