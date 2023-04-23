@@ -31,5 +31,8 @@ public class GenLanguageProvider extends LanguageProvider {
             add("block.additionalvanillastuff." + name, stringFormat(loc));
             //add("item.additionalvanillastuff." + name, stringFormat(loc));
         }
+        add("itemGroup.stairstab.", "Stairs");
+        add("itemGroup.slabstab.", "Slabs");
+        add("itemGroup.wallstab.", "Walls");
     }
 }

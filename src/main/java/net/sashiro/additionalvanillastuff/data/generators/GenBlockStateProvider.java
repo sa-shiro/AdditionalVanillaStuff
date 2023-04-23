@@ -38,7 +38,7 @@ public class GenBlockStateProvider extends BlockStateProvider {
             } else if (blockName.contains("slab")) {
                 slabBlock((SlabBlock) block.get(), new ResourceLocation("block/" + blockSlab), new ResourceLocation("block/" + blockSlab));
             } else if (blockName.contains("bars")) {
-                paneBlock((IronBarsBlock) block.get(),new ResourceLocation("block/" + blockBars), new ResourceLocation("block/" + blockBars));
+                paneBlock((IronBarsBlock) block.get(), new ResourceLocation("block/" + blockBars), new ResourceLocation("block/" + blockBars));
             } else if (blockName.contains("gravel")) {
                 makeSimpleBLock(block.get(), "gravel", "deepslate_gravel_overlay");
             } else if (blockName.contains("sand")) {

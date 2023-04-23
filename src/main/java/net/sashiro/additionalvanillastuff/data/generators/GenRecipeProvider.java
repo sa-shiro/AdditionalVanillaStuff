@@ -7,9 +7,7 @@ import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.sashiro.additionalvanillastuff.AdditionalVanillaStuff;
@@ -28,17 +26,19 @@ public class GenRecipeProvider extends RecipeProvider {
     protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
 
         for (RegistryObject<Block> block : ModRegistryEvent.BLOCK_REGISTRY.getEntries()) {
-            String loc = block.get().getRegistryName().getPath();
-            Block vanillaBLock = Blocks.AIR;
+            assert false;
+            String loc = block.get().getRegistryName().toString().replace("additionalvanillastuff:", "");
+            Block vanillaBLock;
             for (Block mcBlock : ForgeRegistries.BLOCKS) {
-                String blockName = block.get().getRegistryName().getPath().replace("_wall", "").replace("_stairs", "").replace("_slab", "");
-                String mcBlockName = mcBlock.getRegistryName().getPath();
+                String blockName = loc.replace("_wall", "").replace("_stairs", "").replace("_slab", "");
+                String mcBlockName = mcBlock.getRegistryName().toString().replace("minecraft:", "");
 
-                if (mcBlockName.equals(blockName))  {
+                if (mcBlockName.equals(blockName)) {
                     vanillaBLock = mcBlock;
+                    String vanillaBlockName = vanillaBLock.getRegistryName().toString().replace("minecraft:", "");
                     if (!loc.contains("wool")) {
                         if (loc.contains("stairs")) {
-                            SingleItemRecipeBuilder.stonecutting(Ingredient.of(block.get()), vanillaBLock).save(consumer, vanillaBLock.getName() + "_to_" + block.get().getName() + "_stonecutting");
+                            SingleItemRecipeBuilder.stonecutting(Ingredient.of(vanillaBLock), block.get()).unlockedBy("has_item", has(vanillaBLock)).save(consumer, loc + "_from_" + vanillaBlockName + "_stonecutting");
                             ShapedRecipeBuilder.shaped(block.get(), 4) // result
                                     .define('#', vanillaBLock) // ingredient
                                     .pattern("#  ")
@@ -46,17 +46,15 @@ public class GenRecipeProvider extends RecipeProvider {
                                     .pattern("###")
                                     .unlockedBy("has_item", has(vanillaBLock.asItem()))
                                     .save(consumer, new ResourceLocation(AdditionalVanillaStuff.MOD_ID, "shaped_" + loc));
-                        }
-                        else if (loc.contains("slab")) {
-                            SingleItemRecipeBuilder.stonecutting(Ingredient.of(block.get()), vanillaBLock, 2).save(consumer, vanillaBLock.getName() + "_to_" + block.get().getName() + "_stonecutting");
+                        } else if (loc.contains("slab")) {
+                            SingleItemRecipeBuilder.stonecutting(Ingredient.of(vanillaBLock), block.get(), 2).unlockedBy("has_item", has(vanillaBLock)).save(consumer, loc + "_from_" + vanillaBlockName + "_stonecutting");
                             ShapedRecipeBuilder.shaped(block.get(), 6) // result
                                     .define('#', vanillaBLock) // ingredient
                                     .pattern("###")
                                     .unlockedBy("has_item", has(vanillaBLock.asItem()))
                                     .save(consumer, new ResourceLocation(AdditionalVanillaStuff.MOD_ID, "shaped_" + loc));
-                        }
-                        else if (loc.contains("wall")) {
-                            SingleItemRecipeBuilder.stonecutting(Ingredient.of(block.get()), vanillaBLock).save(consumer, vanillaBLock.getName() + "_to_" + block.get().getName() + "_stonecutting");
+                        } else if (loc.contains("wall")) {
+                            SingleItemRecipeBuilder.stonecutting(Ingredient.of(vanillaBLock), block.get()).unlockedBy("has_item", has(vanillaBLock)).save(consumer, loc + "_from_" + vanillaBlockName + "_stonecutting");
                             ShapedRecipeBuilder.shaped(block.get(), 6) // result
                                     .define('#', vanillaBLock) // ingredient
                                     .pattern("###")
@@ -64,8 +62,7 @@ public class GenRecipeProvider extends RecipeProvider {
                                     .unlockedBy("has_item", has(vanillaBLock.asItem()))
                                     .save(consumer, new ResourceLocation(AdditionalVanillaStuff.MOD_ID, "shaped_" + loc));
                         }
-                    }
-                    else if (loc.contains("wool")) {
+                    } else if (loc.contains("wool")) {
                         if (loc.contains("stairs")) {
                             ShapedRecipeBuilder.shaped(block.get(), 4) // result
                                     .define('#', vanillaBLock) // ingredient
