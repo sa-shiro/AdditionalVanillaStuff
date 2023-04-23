@@ -1,0 +1,5 @@
+// 1.19.4	2023-04-21T16:13:45.6187978	Tags for minecraft:block mod id additionalvanillastuff
+df0b60d0293329f70d8b144fb615d6b2c1ffb40b data/minecraft/tags/blocks/mineable/pickaxe.json
+fb2a05487d4573adf45015acb4f4fbc9074f0bb9 data/minecraft/tags/blocks/slabs.json
+c8826f57e8407ab96cad7c36b7aa4eaa490bb18f data/minecraft/tags/blocks/stairs.json
+68f63aaea8d988a4255415c15889eef9ff54fe14 data/minecraft/tags/blocks/walls.json

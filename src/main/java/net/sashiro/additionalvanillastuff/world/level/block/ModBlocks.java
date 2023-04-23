@@ -9,6 +9,9 @@ import static net.sashiro.additionalvanillastuff.event.ModRegistryEvent.BLOCK_RE
 
 @Mod.EventBusSubscriber(modid = AdditionalVanillaStuff.MOD_ID)
 public class ModBlocks {
+    // DIRT STAIRS
+    public static final RegistryObject<Block> DIRT_STAIRS = BLOCK_REGISTRY.register("dirt_stairs", () -> new StairsBlock(Blocks.DIRT::defaultBlockState, AbstractBlock.Properties.copy(Blocks.DIRT)));
+    // TERRACOTTA STAIRS
     public static final RegistryObject<Block> WHITE_TERRACOTTA_STAIRS = BLOCK_REGISTRY.register("white_terracotta_stairs", () -> new StairsBlock(Blocks.WHITE_TERRACOTTA::defaultBlockState, AbstractBlock.Properties.copy(Blocks.WHITE_TERRACOTTA)));
     public static final RegistryObject<Block> ORANGE_TERRACOTTA_STAIRS = BLOCK_REGISTRY.register("orange_terracotta_stairs", () -> new StairsBlock(Blocks.GREEN_TERRACOTTA::defaultBlockState, AbstractBlock.Properties.copy(Blocks.GREEN_TERRACOTTA)));
     public static final RegistryObject<Block> MAGENTA_TERRACOTTA_STAIRS = BLOCK_REGISTRY.register("magenta_terracotta_stairs", () -> new StairsBlock(Blocks.MAGENTA_TERRACOTTA::defaultBlockState, AbstractBlock.Properties.copy(Blocks.MAGENTA_TERRACOTTA)));
@@ -42,6 +45,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_GLAZED_TERRACOTTA_STAIRS = BLOCK_REGISTRY.register("green_glazed_terracotta_stairs", () -> new StairsBlock(Blocks.GREEN_GLAZED_TERRACOTTA::defaultBlockState, AbstractBlock.Properties.copy(Blocks.GREEN_GLAZED_TERRACOTTA)));
     public static final RegistryObject<Block> RED_GLAZED_TERRACOTTA_STAIRS = BLOCK_REGISTRY.register("red_glazed_terracotta_stairs", () -> new StairsBlock(Blocks.RED_GLAZED_TERRACOTTA::defaultBlockState, AbstractBlock.Properties.copy(Blocks.RED_GLAZED_TERRACOTTA)));
     public static final RegistryObject<Block> BLACK_GLAZED_TERRACOTTA_STAIRS = BLOCK_REGISTRY.register("black_glazed_terracotta_stairs", () -> new StairsBlock(Blocks.BLACK_GLAZED_TERRACOTTA::defaultBlockState, AbstractBlock.Properties.copy(Blocks.BLACK_GLAZED_TERRACOTTA)));
+    // CONCRETE STAIRS
     public static final RegistryObject<Block> WHITE_CONCRETE_STAIRS = BLOCK_REGISTRY.register("white_concrete_stairs", () -> new StairsBlock(Blocks.WHITE_CONCRETE::defaultBlockState, AbstractBlock.Properties.copy(Blocks.WHITE_CONCRETE)));
     public static final RegistryObject<Block> ORANGE_CONCRETE_STAIRS = BLOCK_REGISTRY.register("orange_concrete_stairs", () -> new StairsBlock(Blocks.GREEN_CONCRETE::defaultBlockState, AbstractBlock.Properties.copy(Blocks.GREEN_CONCRETE)));
     public static final RegistryObject<Block> MAGENTA_CONCRETE_STAIRS = BLOCK_REGISTRY.register("magenta_concrete_stairs", () -> new StairsBlock(Blocks.MAGENTA_CONCRETE::defaultBlockState, AbstractBlock.Properties.copy(Blocks.MAGENTA_CONCRETE)));
@@ -58,6 +62,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_CONCRETE_STAIRS = BLOCK_REGISTRY.register("green_concrete_stairs", () -> new StairsBlock(Blocks.GREEN_CONCRETE::defaultBlockState, AbstractBlock.Properties.copy(Blocks.GREEN_CONCRETE)));
     public static final RegistryObject<Block> RED_CONCRETE_STAIRS = BLOCK_REGISTRY.register("red_concrete_stairs", () -> new StairsBlock(Blocks.RED_CONCRETE::defaultBlockState, AbstractBlock.Properties.copy(Blocks.RED_CONCRETE)));
     public static final RegistryObject<Block> BLACK_CONCRETE_STAIRS = BLOCK_REGISTRY.register("black_concrete_stairs", () -> new StairsBlock(Blocks.BLACK_CONCRETE::defaultBlockState, AbstractBlock.Properties.copy(Blocks.BLACK_CONCRETE)));
+    // WOOL STAIRS
     public static final RegistryObject<Block> WHITE_WOOL_STAIRS = BLOCK_REGISTRY.register("white_wool_stairs", () -> new StairsBlock(Blocks.WHITE_WOOL::defaultBlockState, AbstractBlock.Properties.copy(Blocks.WHITE_WOOL)));
     public static final RegistryObject<Block> ORANGE_WOOL_STAIRS = BLOCK_REGISTRY.register("orange_wool_stairs", () -> new StairsBlock(Blocks.GREEN_WOOL::defaultBlockState, AbstractBlock.Properties.copy(Blocks.GREEN_WOOL)));
     public static final RegistryObject<Block> MAGENTA_WOOL_STAIRS = BLOCK_REGISTRY.register("magenta_wool_stairs", () -> new StairsBlock(Blocks.MAGENTA_WOOL::defaultBlockState, AbstractBlock.Properties.copy(Blocks.MAGENTA_WOOL)));
@@ -74,6 +79,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_WOOL_STAIRS = BLOCK_REGISTRY.register("green_wool_stairs", () -> new StairsBlock(Blocks.GREEN_WOOL::defaultBlockState, AbstractBlock.Properties.copy(Blocks.GREEN_WOOL)));
     public static final RegistryObject<Block> RED_WOOL_STAIRS = BLOCK_REGISTRY.register("red_wool_stairs", () -> new StairsBlock(Blocks.RED_WOOL::defaultBlockState, AbstractBlock.Properties.copy(Blocks.RED_WOOL)));
     public static final RegistryObject<Block> BLACK_WOOL_STAIRS = BLOCK_REGISTRY.register("black_wool_stairs", () -> new StairsBlock(Blocks.BLACK_WOOL::defaultBlockState, AbstractBlock.Properties.copy(Blocks.BLACK_WOOL)));
+    // METAL STAIRS
     public static final RegistryObject<Block> IRON_BLOCK_STAIRS = BLOCK_REGISTRY.register("iron_block_stairs", () -> new StairsBlock(Blocks.IRON_BLOCK::defaultBlockState, AbstractBlock.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> GOLD_BLOCK_STAIRS = BLOCK_REGISTRY.register("gold_block_stairs", () -> new StairsBlock(Blocks.GOLD_BLOCK::defaultBlockState, AbstractBlock.Properties.copy(Blocks.GOLD_BLOCK)));
     public static final RegistryObject<Block> DIAMOND_BLOCK_STAIRS = BLOCK_REGISTRY.register("diamond_block_stairs", () -> new StairsBlock(Blocks.DIAMOND_BLOCK::defaultBlockState, AbstractBlock.Properties.copy(Blocks.DIAMOND_BLOCK)));
@@ -81,8 +87,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> NETHERITE_BLOCK_STAIRS = BLOCK_REGISTRY.register("netherite_block_stairs", () -> new StairsBlock(Blocks.NETHERITE_BLOCK::defaultBlockState, AbstractBlock.Properties.copy(Blocks.NETHERITE_BLOCK)));
     public static final RegistryObject<Block> LAPIS_BLOCK_STAIRS = BLOCK_REGISTRY.register("lapis_block_stairs", () -> new StairsBlock(Blocks.LAPIS_BLOCK::defaultBlockState, AbstractBlock.Properties.copy(Blocks.LAPIS_BLOCK)));
     public static final RegistryObject<Block> EMERALD_BLOCK_STAIRS = BLOCK_REGISTRY.register("emerald_block_stairs", () -> new StairsBlock(Blocks.EMERALD_BLOCK::defaultBlockState, AbstractBlock.Properties.copy(Blocks.EMERALD_BLOCK)));
+    // STONE STAIRS
     public static final RegistryObject<Block> OBSIDIAN_STAIRS = BLOCK_REGISTRY.register("obsidian_stairs", () -> new StairsBlock(Blocks.OBSIDIAN::defaultBlockState, AbstractBlock.Properties.copy(Blocks.OBSIDIAN)));
     public static final RegistryObject<Block> CRYING_OBSIDIAN_STAIRS = BLOCK_REGISTRY.register("crying_obsidian_stairs", () -> new StairsBlock(Blocks.CRYING_OBSIDIAN::defaultBlockState, AbstractBlock.Properties.copy(Blocks.CRYING_OBSIDIAN)));
+    // DIRT SLABS
+    public static final RegistryObject<Block> DIRT_SLAB = BLOCK_REGISTRY.register("dirt_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.DIRT)));
+    // TERRACOTTA SLABS
     public static final RegistryObject<Block> WHITE_TERRACOTTA_SLAB = BLOCK_REGISTRY.register("white_terracotta_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.WHITE_TERRACOTTA)));
     public static final RegistryObject<Block> ORANGE_TERRACOTTA_SLAB = BLOCK_REGISTRY.register("orange_terracotta_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.GREEN_TERRACOTTA)));
     public static final RegistryObject<Block> MAGENTA_TERRACOTTA_SLAB = BLOCK_REGISTRY.register("magenta_terracotta_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.MAGENTA_TERRACOTTA)));
@@ -116,6 +126,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_GLAZED_TERRACOTTA_SLAB = BLOCK_REGISTRY.register("green_glazed_terracotta_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.GREEN_GLAZED_TERRACOTTA)));
     public static final RegistryObject<Block> RED_GLAZED_TERRACOTTA_SLAB = BLOCK_REGISTRY.register("red_glazed_terracotta_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.RED_GLAZED_TERRACOTTA)));
     public static final RegistryObject<Block> BLACK_GLAZED_TERRACOTTA_SLAB = BLOCK_REGISTRY.register("black_glazed_terracotta_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.BLACK_GLAZED_TERRACOTTA)));
+    // CONCRETE SLABS
     public static final RegistryObject<Block> WHITE_CONCRETE_SLAB = BLOCK_REGISTRY.register("white_concrete_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.WHITE_CONCRETE)));
     public static final RegistryObject<Block> ORANGE_CONCRETE_SLAB = BLOCK_REGISTRY.register("orange_concrete_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.GREEN_CONCRETE)));
     public static final RegistryObject<Block> MAGENTA_CONCRETE_SLAB = BLOCK_REGISTRY.register("magenta_concrete_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.MAGENTA_CONCRETE)));
@@ -132,6 +143,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_CONCRETE_SLAB = BLOCK_REGISTRY.register("green_concrete_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.GREEN_CONCRETE)));
     public static final RegistryObject<Block> RED_CONCRETE_SLAB = BLOCK_REGISTRY.register("red_concrete_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.RED_CONCRETE)));
     public static final RegistryObject<Block> BLACK_CONCRETE_SLAB = BLOCK_REGISTRY.register("black_concrete_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.BLACK_CONCRETE)));
+    // WOOL SLABS
     public static final RegistryObject<Block> WHITE_WOOL_SLAB = BLOCK_REGISTRY.register("white_wool_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.WHITE_WOOL)));
     public static final RegistryObject<Block> ORANGE_WOOL_SLAB = BLOCK_REGISTRY.register("orange_wool_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.GREEN_WOOL)));
     public static final RegistryObject<Block> MAGENTA_WOOL_SLAB = BLOCK_REGISTRY.register("magenta_wool_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.MAGENTA_WOOL)));
@@ -148,6 +160,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_WOOL_SLAB = BLOCK_REGISTRY.register("green_wool_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.GREEN_WOOL)));
     public static final RegistryObject<Block> RED_WOOL_SLAB = BLOCK_REGISTRY.register("red_wool_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.RED_WOOL)));
     public static final RegistryObject<Block> BLACK_WOOL_SLAB = BLOCK_REGISTRY.register("black_wool_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.BLACK_WOOL)));
+    // METAL SLABS
     public static final RegistryObject<Block> IRON_BLOCK_SLAB = BLOCK_REGISTRY.register("iron_block_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> GOLD_BLOCK_SLAB = BLOCK_REGISTRY.register("gold_block_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.GOLD_BLOCK)));
     public static final RegistryObject<Block> DIAMOND_BLOCK_SLAB = BLOCK_REGISTRY.register("diamond_block_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.DIAMOND_BLOCK)));
@@ -155,8 +168,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> NETHERITE_BLOCK_SLAB = BLOCK_REGISTRY.register("netherite_block_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.NETHERITE_BLOCK)));
     public static final RegistryObject<Block> LAPIS_BLOCK_SLAB = BLOCK_REGISTRY.register("lapis_block_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.LAPIS_BLOCK)));
     public static final RegistryObject<Block> EMERALD_BLOCK_SLAB = BLOCK_REGISTRY.register("emerald_block_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.EMERALD_BLOCK)));
+    // STONE SLABS
     public static final RegistryObject<Block> OBSIDIAN_SLAB = BLOCK_REGISTRY.register("obsidian_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.OBSIDIAN)));
     public static final RegistryObject<Block> CRYING_OBSIDIAN_SLAB = BLOCK_REGISTRY.register("crying_obsidian_slab", () -> new SlabBlock(AbstractBlock.Properties.copy(Blocks.CRYING_OBSIDIAN)));
+    // DIRT WALL
+    public static final RegistryObject<Block> DIRT_WALL = BLOCK_REGISTRY.register("dirt_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.DIRT)));
+    // TERRACOTTA WALLS
     public static final RegistryObject<Block> WHITE_TERRACOTTA_WALL = BLOCK_REGISTRY.register("white_terracotta_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.WHITE_TERRACOTTA)));
     public static final RegistryObject<Block> ORANGE_TERRACOTTA_WALL = BLOCK_REGISTRY.register("orange_terracotta_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.GREEN_TERRACOTTA)));
     public static final RegistryObject<Block> MAGENTA_TERRACOTTA_WALL = BLOCK_REGISTRY.register("magenta_terracotta_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.MAGENTA_TERRACOTTA)));
@@ -190,6 +207,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_GLAZED_TERRACOTTA_WALL = BLOCK_REGISTRY.register("green_glazed_terracotta_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.GREEN_GLAZED_TERRACOTTA)));
     public static final RegistryObject<Block> RED_GLAZED_TERRACOTTA_WALL = BLOCK_REGISTRY.register("red_glazed_terracotta_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.RED_GLAZED_TERRACOTTA)));
     public static final RegistryObject<Block> BLACK_GLAZED_TERRACOTTA_WALL = BLOCK_REGISTRY.register("black_glazed_terracotta_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.BLACK_GLAZED_TERRACOTTA)));
+    // CONCRETE WALLS
     public static final RegistryObject<Block> WHITE_CONCRETE_WALL = BLOCK_REGISTRY.register("white_concrete_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.WHITE_CONCRETE)));
     public static final RegistryObject<Block> ORANGE_CONCRETE_WALL = BLOCK_REGISTRY.register("orange_concrete_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.GREEN_CONCRETE)));
     public static final RegistryObject<Block> MAGENTA_CONCRETE_WALL = BLOCK_REGISTRY.register("magenta_concrete_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.MAGENTA_CONCRETE)));
@@ -206,6 +224,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_CONCRETE_WALL = BLOCK_REGISTRY.register("green_concrete_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.GREEN_CONCRETE)));
     public static final RegistryObject<Block> RED_CONCRETE_WALL = BLOCK_REGISTRY.register("red_concrete_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.RED_CONCRETE)));
     public static final RegistryObject<Block> BLACK_CONCRETE_WALL = BLOCK_REGISTRY.register("black_concrete_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.BLACK_CONCRETE)));
+    // WOOL WALLS
     public static final RegistryObject<Block> WHITE_WOOL_WALL = BLOCK_REGISTRY.register("white_wool_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.WHITE_WOOL)));
     public static final RegistryObject<Block> ORANGE_WOOL_WALL = BLOCK_REGISTRY.register("orange_wool_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.GREEN_WOOL)));
     public static final RegistryObject<Block> MAGENTA_WOOL_WALL = BLOCK_REGISTRY.register("magenta_wool_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.MAGENTA_WOOL)));
@@ -222,6 +241,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> GREEN_WOOL_WALL = BLOCK_REGISTRY.register("green_wool_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.GREEN_WOOL)));
     public static final RegistryObject<Block> RED_WOOL_WALL = BLOCK_REGISTRY.register("red_wool_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.RED_WOOL)));
     public static final RegistryObject<Block> BLACK_WOOL_WALL = BLOCK_REGISTRY.register("black_wool_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.BLACK_WOOL)));
+    // METAL WALLS
     public static final RegistryObject<Block> IRON_BLOCK_WALL = BLOCK_REGISTRY.register("iron_block_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.IRON_BLOCK)));
     public static final RegistryObject<Block> GOLD_BLOCK_WALL = BLOCK_REGISTRY.register("gold_block_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.GOLD_BLOCK)));
     public static final RegistryObject<Block> DIAMOND_BLOCK_WALL = BLOCK_REGISTRY.register("diamond_block_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.DIAMOND_BLOCK)));
@@ -229,6 +249,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> NETHERITE_BLOCK_WALL = BLOCK_REGISTRY.register("netherite_block_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.NETHERITE_BLOCK)));
     public static final RegistryObject<Block> LAPIS_BLOCK_WALL = BLOCK_REGISTRY.register("lapis_block_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.LAPIS_BLOCK)));
     public static final RegistryObject<Block> EMERALD_BLOCK_WALL = BLOCK_REGISTRY.register("emerald_block_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.EMERALD_BLOCK)));
+    // STONE WALLS
     public static final RegistryObject<Block> OBSIDIAN_WALL = BLOCK_REGISTRY.register("obsidian_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.OBSIDIAN)));
     public static final RegistryObject<Block> CRYING_OBSIDIAN_WALL = BLOCK_REGISTRY.register("crying_obsidian_wall", () -> new WallBlock(AbstractBlock.Properties.copy(Blocks.CRYING_OBSIDIAN)));
 

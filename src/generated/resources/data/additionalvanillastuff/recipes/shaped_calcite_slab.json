@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
+  "category": "building",
   "key": {
     "#": {
       "item": "minecraft:calcite"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "additionalvanillastuff:calcite_slab",
-    "count": 6
-  }
+    "count": 6,
+    "item": "additionalvanillastuff:calcite_slab"
+  },
+  "show_notification": true
 }

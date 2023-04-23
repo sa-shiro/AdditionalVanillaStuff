@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "additionalvanillastuff:block/emerald_block_slab_top"
-    },
     "type=bottom": {
       "model": "additionalvanillastuff:block/emerald_block_slab"
     },
     "type=double": {
       "model": "minecraft:block/emerald_block"
+    },
+    "type=top": {
+      "model": "additionalvanillastuff:block/emerald_block_slab_top"
     }
   }
 }

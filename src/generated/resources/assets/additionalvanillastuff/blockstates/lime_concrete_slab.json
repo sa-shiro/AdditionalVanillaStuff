@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "additionalvanillastuff:block/lime_concrete_slab_top"
-    },
     "type=bottom": {
       "model": "additionalvanillastuff:block/lime_concrete_slab"
     },
     "type=double": {
       "model": "minecraft:block/lime_concrete"
+    },
+    "type=top": {
+      "model": "additionalvanillastuff:block/lime_concrete_slab_top"
     }
   }
 }

@@ -1,15 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
+  "category": "building",
   "key": {
     "#": {
       "item": "minecraft:blue_concrete"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "additionalvanillastuff:blue_concrete_slab",
-    "count": 6
-  }
+    "count": 6,
+    "item": "additionalvanillastuff:blue_concrete_slab"
+  },
+  "show_notification": true
 }
